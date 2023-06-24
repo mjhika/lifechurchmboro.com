@@ -1,0 +1,50 @@
+<nav class="">
+
+    <ul class="flex items-center content-between">
+
+        {{ range .Site.Menus.main }}
+        <li class="mx-2 group hidden lg:inline">
+
+            <div class="p-2 group-hover:bg-accent dark:group-hover:bg-primary-light">
+                <a href="{{ .URL }}"
+                    class='no-underline text-primary-light group-hover:text-secondary-light dark:group-hover:text-secondary-dark'>
+                    {{- .Pre }}
+                    {{ .Name -}}
+                    {{- with .Page }}
+                    {{- with .Params.version -}}
+                    ({{ . }})
+                    {{- end }}
+                    {{- end }}
+                </a>
+            </div>
+
+            {{ if .HasChildren }}
+            <div
+                class="absolute hidden py-2 bg-secondary-light dark:bg-secondary-light shadow-2xl dark:shadow-none group-hover:block z-10">
+                <ul>
+                    {{ range .Children }}
+                    <li class="py-2 px-6 text-primary hover:text-secondary hover:bg-primary-light">
+                        <a href="{{ .URL }}">
+                            {{- .Pre }}
+                            {{ .Name -}}
+                            {{- with .Page }}
+                            {{- with .Params.version -}}
+                            ({{ . }})
+                            {{- end }}
+                            {{- end }}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+        </li>
+        {{ end }}
+        
+        {{- partial "hamburger.html" -}}
+        {{- partial "theme-toggle.html" -}}
+
+    </ul>
+
+</nav>

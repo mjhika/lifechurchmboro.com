@@ -1,0 +1,6 @@
+baseURL = 'https://lifechurchmboro.com'
+languageCode = 'en-us'
+enableEmoji = 'true'
+Paginate = '3'
+title = 'LifeChurch Middlesboro'
+theme = 'church-site'

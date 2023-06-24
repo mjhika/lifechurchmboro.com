@@ -1,0 +1,70 @@
+[[main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 10
+  [[main]]
+    name = 'Our Beliefs'
+    pageRef = '/beliefs'
+    parent = 'About'
+    weight = 1
+  [[main]]
+    name = 'Service Times'
+    pageRef = '/services'
+    parent = 'About'
+    weight = 2
+  [[main]]
+    name = 'Meet Our Teams'
+    pageRef = '/team'
+    parent = 'About'
+    weight = 3
+[[main]]
+  name = 'Ministries'
+  pageRef = '/ministries'
+  weight = 20
+  [[main]]
+    name = 'LifeKids'
+    pageRef = '/LifeKids'
+    parent = 'Ministries'
+    weight = 1
+  [[main]]
+    name = 'Royal Rangers'
+    pageRef = '/royalrangers'
+    parent = 'Ministries'
+    weight = 2
+  [[main]]
+    name = 'Wild Ones - Young Adults'
+    pageRef = '/team'
+    parent = 'Ministries'
+    weight = 3
+[[main]]
+  name = 'Resources'
+  pageRef = '/resources'
+  weight = 30
+  [[main]]
+    name = 'LifeChurch App'
+    pageRef = '/app'
+    parent = 'Resources'
+    weight = 1
+  [[main]]
+    name = 'Sermon Notes'
+    pageRef = '/notes'
+    parent = 'Resources'
+    weight = 2
+  [[main]]
+    name = 'Devotional'
+    pageRef = '/devotional'
+    parent = 'Resources'
+    weight = 3
+[[main]]
+  name = 'Give'
+  pageRef = '/give'
+  weight = 40
+[[main]]
+  name = 'Watch Live'
+  pre = '🔴'
+  pageRef = '/watch'
+  weight = 50
+[[main]]
+  name = 'Connect'
+  pageRef = '/connect'
+  weight = 60
