@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     {{- partial "head.html" . -}}
-</head>
+  </head>
 
 <body class="relative min-h-screen bg-secondary text-primary dark:bg-secondary">
-    {{- partial "dev/size-indicator.html" . -}} {{- partial "header.html" . -}}
+    {{- partial "dev/size-indicator.html" . -}}
+    {{- partial "header.html" . -}}
+
+
     <div id="content">{{- block "main" . }}{{- end }}</div>
+
     {{- partial "footer.html" . -}}
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-
-</body>
-
+  </body>
 </html>

@@ -1,17 +1,16 @@
 {{ $page := . }}
 
-<header class="w-auto flex items-center justify-between px-5 mx-auto pt-5 font-serif">
- 
-	<div class="flex items-center">
-		<a href="{{ .Site.Home.Permalink }}" class="no-underline select-none">
-			<div>
-				{{- partial "icon" . -}}
-			</div>
-		</a>
-	</div>
 
-	<div>
-		{{- partial "nav.html" . -}}
-	</div>
+<header
+  class="fixed top-0 mx-auto flex w-full items-center justify-between bg-secondary pt-1 font-serif"
+>
+  <div class="flex items-center">
+    <a href="{{ .Site.Home.Permalink }}" class="select-none no-underline">
+      {{- partial "icon" . -}}
+    </a>
+  </div>
 
+  <div>
+    {{- partial "nav.html" . -}}
+  </div>
 </header>
