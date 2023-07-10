@@ -1,50 +1,98 @@
-<nav class="">
-
-    <ul class="flex items-center content-between">
-
-        {{ range .Site.Menus.main }}
-        <li class="mx-2 group hidden lg:inline">
-
-            <div class="p-2 group-hover:bg-accent dark:group-hover:bg-primary-light">
-                <a href="{{ .URL }}"
-                    class='no-underline text-primary-light group-hover:text-secondary-light dark:group-hover:text-secondary-dark'>
-                    {{- .Pre }}
-                    {{ .Name -}}
-                    {{- with .Page }}
-                    {{- with .Params.version -}}
-                    ({{ . }})
-                    {{- end }}
-                    {{- end }}
-                </a>
-            </div>
-
-            {{ if .HasChildren }}
+<nav class="flex items-center pr-4">
+  <div id="desktop-menu" class="relative hidden lg:block">
+    <ul class="relative flex flex-row content-between items-center">
+      {{ range .Site.Menus.main }}
+        <li class="group m-2 block">
+          <a href="{{- .URL }}" class="no-underline">
             <div
-                class="absolute hidden py-2 bg-secondary-light dark:bg-secondary-light shadow-2xl dark:shadow-none group-hover:block z-10">
-                <ul>
-                    {{ range .Children }}
-                    <li class="py-2 px-6 text-primary hover:text-secondary hover:bg-primary-light">
-                        <a href="{{ .URL }}">
-                            {{- .Pre }}
-                            {{ .Name -}}
-                            {{- with .Page }}
-                            {{- with .Params.version -}}
-                            ({{ . }})
-                            {{- end }}
-                            {{- end }}
-                        </a>
-                    </li>
-                    {{ end }}
-                </ul>
+              class="z-10 flex justify-center border-2 border-primary-dark px-4 py-2 hover:bg-primary-dark hover:text-secondary dark:border-primary-light dark:hover:bg-primary dark:hover:text-secondary"
+            >
+              {{- .Pre }}
+              {{ .Name -}}
+              {{- with .Page }}
+                {{- with .Params.version -}}({{ . }}){{- end }}
+              {{- end }}
             </div>
-            {{ end }}
-
+          </a>
+          {{ if .HasChildren }}
+            <div class="absolute hidden group-hover:inline">
+              <ul
+                class="h-full w-full bg-secondary-light p-8 shadow-xl dark:shadow-none"
+              >
+                {{ range .Children }}
+                  <a href="{{ .URL }}" class="h-full w-full">
+                    <li
+                      class="h-full w-full px-8 py-4 text-primary hover:bg-primary hover:text-secondary"
+                    >
+                      {{- .Pre }}
+                      {{ .Name -}}
+                      {{- with .Page }}
+                        {{- with .Params.version -}}
+                          ({{ . }})
+                        {{- end }}
+                      {{- end }}
+                    </li>
+                  </a>
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
         </li>
-        {{ end }}
-        
-        {{- partial "hamburger.html" -}}
-        {{- partial "theme-toggle.html" -}}
-
+      {{ end }}
     </ul>
-
+  </div>
+  {{- partial "hamburger.html" -}}
+  <div class="lg:hidden">
+    <div id="mobile-menu" class="hidden peer-hover/ham:inline">
+      <ul
+        class="absolute inset-0 flex h-screen w-screen flex-col pt-20 backdrop-blur-3xl"
+      >
+        {{ range .Site.Menus.main }}
+          <li class="block w-full">
+            <div class="mb-3 flex w-full content-center">
+              <div class="mx-auto border-2 border-primary px-4 py-2">
+                <a
+                  href="{{- .URL -}}"
+                  class="text-center text-xl no-underline sm:text-2xl"
+                >
+                  {{- .Pre }}
+                  {{ .Name -}}
+                  {{- with .Page }}
+                    {{- with .Params.version -}}
+                      ({{ . }})
+                    {{- end }}
+                  {{- end }}
+                </a>
+              </div>
+            </div>
+            {{ if .HasChildren }}
+              <div class="mb-4 grid grid-cols-3 text-base">
+                <div class=""></div>
+                <ul class="">
+                  {{ range .Children }}
+                    <li class="py-0.5">
+                      <a
+                        href="{{ .URL }}"
+                        class="text-primary hover:underline hover:underline-offset-8 sm:text-lg"
+                      >
+                        {{- .Pre }}
+                        {{ .Name -}}
+                        {{- with .Page }}
+                          {{- with .Params.version -}}
+                            ({{ . }})
+                          {{- end }}
+                        {{- end }}
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+                <div></div>
+              </div>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  {{- partial "theme-toggle.html" -}}
 </nav>

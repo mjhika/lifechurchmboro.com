@@ -1,8 +1,19 @@
-<button id="hamburger" type="button"
-  class="p-2 mx-2 w-auto lg:hidden focus:ring-4 focus:ring-gray-200 focus:outline-none group/ham dark:focus:ring-gray-700 hover:bg-secondary-dark">
-  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd"
-      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z">
-    </path>
+<button
+  id="hamburger"
+  type="button"
+  onclick="navItemsToggle()"
+  class="peer/ham z-50 mx-2 w-auto p-2 hover:bg-secondary-dark focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 lg:hidden"
+>
+  <svg
+    class="h-6 w-6"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+    ></path>
   </svg>
 </button>
