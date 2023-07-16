@@ -2,3 +2,5 @@
 **/package-lock.json
 themes/church-site/static/css/style.css
 .hugo_build.lock
+.idea/
+.DS_Store

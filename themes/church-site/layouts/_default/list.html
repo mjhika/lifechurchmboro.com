@@ -1,10 +1,16 @@
-{{ define "main" }}
-    {{ range .Pages }}
-        <article class="text-gray-700 sm:mx-12 mb-4">
-            <h1 class="font-bold font-thin text-3xl text-gray-700">
-                {{ . }}
-            </h1>
-            {{ .Content }}
-        </article>
+<div class="">
+  <h1 class="">{{ .Name }}</h1>
+
+  {{ range (where .Pages "Params.type" "post" ).GroupByDate "2006" }}
+    <h2 class="">{{ .Key }}</h2>
+
+    {{- range .Pages -}}
+      <article class="">
+        <a href="{{ .Permalink }}" class="">{{ .Title }}</a>
+        <div class=""></div>
+        <span class="">{{ dateFormat "January 2, 2006" .Date }}</span>
+      </article>
     {{ end }}
-{{ end }}
+  {{ end }}
+
+</div>

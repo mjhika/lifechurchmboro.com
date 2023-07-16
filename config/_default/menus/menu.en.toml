@@ -4,17 +4,17 @@
   weight = 10
   [[main]]
     name = 'Our Beliefs'
-    pageRef = '/beliefs'
+    pageRef = '/about/beliefs'
     parent = 'About'
     weight = 1
   [[main]]
     name = 'Service Times'
-    pageRef = '/services'
+    pageRef = '/about/services'
     parent = 'About'
     weight = 2
   [[main]]
     name = 'Meet Our Teams'
-    pageRef = '/team'
+    pageRef = '/about/teams'
     parent = 'About'
     weight = 3
 [[main]]
@@ -23,17 +23,17 @@
   weight = 20
   [[main]]
     name = 'LifeKids'
-    pageRef = '/LifeKids'
+    pageRef = '/ministries/lifekids'
     parent = 'Ministries'
     weight = 1
   [[main]]
     name = 'Royal Rangers'
-    pageRef = '/royalrangers'
+    pageRef = '/ministries/royalrangers'
     parent = 'Ministries'
     weight = 2
   [[main]]
     name = 'Wild Ones - Young Adults'
-    pageRef = '/team'
+    pageRef = '/ministries/youngadults'
     parent = 'Ministries'
     weight = 3
 [[main]]
@@ -42,17 +42,17 @@
   weight = 30
   [[main]]
     name = 'LifeChurch App'
-    pageRef = '/app'
+    pageRef = '/resources/app'
     parent = 'Resources'
     weight = 1
   [[main]]
     name = 'Sermon Notes'
-    pageRef = '/notes'
+    pageRef = '/resources/notes'
     parent = 'Resources'
     weight = 2
   [[main]]
     name = 'Devotional'
-    pageRef = '/devotional'
+    pageRef = '/resources/devotional'
     parent = 'Resources'
     weight = 3
 [[main]]
