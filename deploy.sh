@@ -2,6 +2,10 @@
 
 cd themes/church-site
 
+echo "Download deps"
+
+npm install
+
 echo "Begin build"
 
 npm run deploy
