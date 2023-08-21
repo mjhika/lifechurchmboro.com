@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd themes/church-site
-
 echo "Download deps"
 
 npm install

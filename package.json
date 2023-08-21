@@ -1,12 +1,12 @@
 {
-  "name": "church-site",
+  "name": "lifechurchmboro.com",
   "version": "0.0.1",
   "scripts": {
     "watch:css": "npx tailwindcss -i ./assets/css/input.css -o ./static/css/style.css --watch",
-    "watch:hugo": "cd ../.. && hugo server --disableFastRender",
+    "watch:hugo": "hugo server --disableFastRender",
     "develop": "run-p -l watch:*",
     "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./static/css/style.css --minify",
-    "build:hugo": "cd ../.. && hugo --gc -D --minify",
+    "build:hugo": "hugo --gc -D --minify",
     "deploy": "run-s -l build:*"
   },
   "devDependencies": {
