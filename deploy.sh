@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # echo "Download deps"
-# npm install
+npm install
 
 echo "Begin build"
 npm run deploy
