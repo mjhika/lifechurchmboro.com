@@ -1,11 +1,9 @@
 #!/bin/bash
 
-echo "Download deps"
-
-sudo npm install -g --unsafe-perm=true --allow-root
+# echo "Download deps"
+# npm install
 
 echo "Begin build"
-
-sudo npm run deploy
+npm run deploy
 
 echo "Build process done"
