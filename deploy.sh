@@ -2,7 +2,7 @@
 
 echo "Download deps"
 
-npm install --unsafe-perm=true --allow-root
+npm install -g
 
 echo "Begin build"
 
