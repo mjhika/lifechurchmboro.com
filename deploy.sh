@@ -1,9 +1,7 @@
 #!/bin/bash
 
-echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-pwd
-ls -lAFh
-echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "Pull deps"
+npm clean-install --progress=false
 
 echo "Begin build"
 npm run deploy
