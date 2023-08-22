@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# echo "Download deps"
+echo "Take ownership"
+chown -R root /opt/pages
+
+echo "Download deps"
 npm install
 
 echo "Begin build"
