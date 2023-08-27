@@ -3,9 +3,9 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const typography = require("@tailwindcss/typography");
 
 module.exports = {
-  // content: ["./**/*.{html,js,md}", "!./node_modules"],
+  content: ["./**/*.{html,js,md}", "!./node_modules"],
   // content: ["./**/*.{js,md}", "!./node_modules", "./hugo_stats.json"],
-  content: ["./hugo_stats.json"],
+  // content: ["./hugo_stats.json"],
   darkMode: "class",
   theme: {
     extend: {
