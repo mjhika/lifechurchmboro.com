@@ -6,7 +6,7 @@
     "watch:hugo": "hugo server -FD --disableFastRender",
     "develop": "run-p -l watch:*",
     "build:hugo": "hugo --gc -D --minify",
-    "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./static/css/style.css --minify",
+    "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./public/css/style.css --minify",
     "deploy": "run-s -l build:*",
     "test": "./http-server --dir public"
   },
