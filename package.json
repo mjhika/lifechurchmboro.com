@@ -5,9 +5,10 @@
     "watch:css": "npx tailwindcss -i ./assets/css/input.css -o ./static/css/style.css --watch",
     "watch:hugo": "hugo server -FD --disableFastRender",
     "develop": "run-p -l watch:*",
-    "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./static/css/style.css --minify",
     "build:hugo": "hugo --gc -D --minify",
-    "deploy": "run-s -l build:*"
+    "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./static/css/style.css --minify",
+    "deploy": "run-s -l build:*",
+    "test": "./http-server --dir public"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
