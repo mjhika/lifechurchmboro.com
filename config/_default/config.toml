@@ -4,6 +4,10 @@ enableEmoji = 'true'
 Paginate = '3'
 title = 'LifeChurch Middlesboro'
 # theme = 'church-site'
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [build]
   writeStats = true

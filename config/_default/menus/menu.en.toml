@@ -66,5 +66,7 @@
   weight = 50
 [[main]]
   name = 'Connect'
-  pageRef = '/connect'
+  url = 'https://docs.google.com/forms/d/e/1FAIpQLSe-JBfqyX2Uz4dsnIi6gpnHtVXjSFGJqNIiYcJ3WC6UQgkDLQ/viewform'
   weight = 60
+    [[main.params]]
+      rel = 'external'
