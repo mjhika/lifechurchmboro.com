@@ -2,7 +2,7 @@
 title: "Beliefs"
 date: 2023-07-10T16:05:42-04:00
 draft: true
-description: 
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras semper auctor neque vitae tempus quam pellentesque nec.
 ---
 
 # A Header Here
