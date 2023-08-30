@@ -1,21 +1,27 @@
 {{ define "main" }}
-<div class="min-h-screen grid grid-cols-1 pt-10 px-10 justify-items-center">
-  <article class="prose prose-xl prose-headings:font-highlight prose-p:font-serif dark:prose-invert p-10 max-w-screen-lg">
-    <h1 class="">{{ .Title }}</h1>
-    {{ .Content }}
-  </article>
-  <ul class="flex flex-row flex-wrap gap-6 min-w-min justify-self-stretch w-11/12 mx-auto">
-  <!-- <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-w-min justify-self-stretch w-11/12 mx-auto mt-4"> -->
-    {{ range .Pages }}
-      <li class="mx-auto">
-        <a href="{{ .Permalink }}" class="text-secondary">
-          <div class="bg-secondary-light h-48 w-96 drop-shadow-lg hover:drop-shadow-2xl text-primary rounded-xl prose dark:prose-invert prose-xl p-6 prose-headings:font-highlight prose-p:font-serif">
-            <h2 class="">{{ .Title }}</h2>
-            <p class="">{{ .Description | strings.Truncate 60 }}</p>
-          </div>
-        </a>
-      </li>
-    {{end}}
-  </ul>
-</div>
+  <div class="grid min-h-screen grid-cols-1 justify-items-center px-10 pt-10">
+    <article
+      class="prose prose-xl max-w-screen-lg p-10 dark:prose-invert prose-headings:font-highlight prose-p:font-serif"
+    >
+      <h1 class="">{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+    <ul
+      class="mx-auto flex w-11/12 min-w-min flex-row flex-wrap gap-6 justify-self-stretch"
+    >
+      <!-- <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-w-min justify-self-stretch w-11/12 mx-auto mt-4"> -->
+      {{ range .Pages }}
+        <li class="mx-auto">
+          <a href="{{ .Permalink }}" class="text-secondary">
+            <div
+              class="prose prose-xl h-48 w-96 rounded-xl bg-secondary-light p-6 text-primary drop-shadow-lg dark:prose-invert hover:drop-shadow-2xl prose-headings:font-highlight prose-p:font-serif"
+            >
+              <h2 class="">{{ .Title }}</h2>
+              <p class="">{{ .Description | strings.Truncate 60 }}</p>
+            </div>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}

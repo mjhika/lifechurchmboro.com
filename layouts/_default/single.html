@@ -1,10 +1,12 @@
 {{ define "main" }}
-<div class="flex justify-center">
-  <article class="prose prose-xl dark:prose-invert max-w-prose prose-headings:font-highlight prose-p:font-serif">
-    <h1 class="pl-8 md:pl-4">{{ .Title }}</h1>
-    <div class="bg-secondary-light p-10 drop-shadow-2xl rounded-xl m-4 z-40">
-    {{ .Content }}
-    </div>
-  </article>
-</div>
+  <div class="flex justify-center">
+    <article
+      class="prose prose-xl max-w-prose dark:prose-invert prose-headings:font-highlight prose-p:font-serif"
+    >
+      <h1 class="pl-8 md:pl-4">{{ .Title }}</h1>
+      <div class="z-40 m-4 rounded-xl bg-secondary-light p-10 drop-shadow-2xl">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
 {{ end }}
