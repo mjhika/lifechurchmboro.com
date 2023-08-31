@@ -1,7 +1,9 @@
 {{ define "main" }}
-  <div class="grid min-h-screen grid-cols-1 justify-items-center px-10 pt-10">
+  <div
+    class="grid min-h-screen grid-cols-1 justify-items-center pt-10 sm:px-10"
+  >
     <article
-      class="prose prose-xl max-w-screen-lg p-10 dark:prose-invert prose-headings:font-highlight prose-p:font-serif"
+      class="prose prose-xl max-w-screen-lg p-4 dark:prose-invert prose-headings:font-highlight prose-p:font-serif sm:p-10"
     >
       <h1 class="">{{ .Title }}</h1>
       {{ .Content }}
@@ -14,7 +16,7 @@
         <li class="mx-auto">
           <a href="{{ .Permalink }}" class="text-secondary">
             <div
-              class="prose prose-xl h-48 w-96 rounded-xl bg-secondary-light p-6 text-primary drop-shadow-lg dark:prose-invert hover:drop-shadow-2xl prose-headings:font-highlight prose-p:font-serif"
+              class="prose prose-xl h-48 w-[22rem] rounded-xl bg-secondary-light p-6 text-primary drop-shadow-lg dark:prose-invert hover:drop-shadow-2xl prose-headings:font-highlight prose-p:font-serif sm:w-96"
             >
               <h2 class="">{{ .Title }}</h2>
               <p class="">{{ .Description | strings.Truncate 60 }}</p>

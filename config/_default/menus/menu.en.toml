@@ -57,8 +57,10 @@
     weight = 3
 [[main]]
   name = 'Give'
-  pageRef = '/give'
+  url = 'https://ppay.co/MRQwxDYXXig'
   weight = 40
+    [[main.params]]
+      rel = 'external'
 [[main]]
   name = 'Watch Live'
   pre = '🔴'
@@ -70,3 +72,42 @@
   weight = 60
     [[main.params]]
       rel = 'external'
+
+
+[[footer]]
+  name = 'Socials'
+  url = '/'
+  weight = 10
+  [[footer]]
+    name = 'Facebook'
+    url = 'https://www.facebook.com/lifechurchmboro/'
+    parent = 'Socials'
+    weight = 1
+    [[footer.params]]
+      rel = 'external'
+  [[footer]]
+    name = 'Instagram'
+    url = 'https://www.instagram.com/lifechurch_middlesboro/'
+    parent = 'Socials'
+    weight = 2
+    [[footer.params]]
+      rel = 'external'
+[[footer]]
+  name = 'Ministries'
+  pageRef = '/ministries'
+  weight = 20
+  [[footer]]
+    name = 'LifeKids'
+    pageRef = '/ministries/lifekids'
+    parent = 'Ministries'
+    weight = 1
+  [[footer]]
+    name = 'Royal Rangers'
+    pageRef = '/ministries/royalrangers'
+    parent = 'Ministries'
+    weight = 2
+  [[footer]]
+    name = 'Wild Ones - Young Adults'
+    pageRef = '/ministries/youngadults'
+    parent = 'Ministries'
+    weight = 3

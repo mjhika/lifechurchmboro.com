@@ -1,4 +1,36 @@
-<footer class="p-20">
-  <p>© 2023 LifeChurch Middesboro</p>
-  John 1:18
+<footer
+  class="mx-10 mt-6 flex flex-row flex-wrap items-center justify-around gap-12"
+>
+  <div
+    class="prose prose-sm underline-offset-4 prose-p:font-serif prose-p:text-primary prose-a:font-serif prose-a:text-primary prose-ul:m-0 prose-ul:list-none"
+  >
+    <p>© 2023 LifeChurch Middesboro</p>
+    <p>John 1:18</p>
+  </div>
+  <div
+    class="prose prose-sm flex flex-row flex-wrap gap-12 prose-a:font-serif prose-a:text-primary prose-a:no-underline prose-ul:m-0 prose-ul:list-none"
+  >
+    {{ range .Site.Menus.footer }}
+      <ul class="">
+        <li>
+          <a href="{{ .URL }}" class="underline-offset-4 hover:underline"
+            >{{ .Name }}</a
+          >
+          {{ if .HasChildren }}
+            <ul class="flex flex-col">
+              {{ range .Children }}
+                <li>
+                  <a
+                    href="{{ .URL }}"
+                    class="underline-offset-4 hover:underline"
+                    >{{ .Name }}</a
+                  >
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </li>
+      </ul>
+    {{ end }}
+  </div>
 </footer>
